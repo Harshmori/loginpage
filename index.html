@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color:powderblue;">
+    <div class="container">
+        <div class="forms-container">
+            <div class="signin-signup">
+                <form action="" class="sign-in-form">
+                    <h2 class="title">Log In</h2>
+
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="email" placeholder="E-Mail">
+                    </div>
+
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="password" id="password">
+                        <div id="toggle" onclick="showhide();"></div>
+                    </div>
+                    <input type="submit" value="login" class="btn solid">
+
+                    <p class="social-text">Or Sign In With Google</p>
+                    <div class="input-field">
+                        <a href="#" class="gbtn"><i class="fab fa-google"></i></a> 
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        const password = document.getElementById('password');
+        const toggle = document.getElementById('toggle');
+        
+        function showhide() {
+            if (password.type === "password") {
+                password.setAttribute('type','text');
+                toggle.classList.add('hide')
+            } else {
+                password.setAttribute('type','password');
+                toggle.classList.remove('hide')
+            }
+}
+    </script>
+</body>
+</html>
